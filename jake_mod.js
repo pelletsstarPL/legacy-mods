@@ -8,6 +8,8 @@ G.AddData({
     sheets:{'spicySheet':'https://raw.githubusercontent.com/JakeSESaunders/Legacy-Mod/master/img/pepperIconSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
     func:function()
     {
+        // JAKE'S COPY OF ORTEIL'S MOD
+
         //The idea in this simple example mod is to add a few elements focused around hot sauce, because hot sauce is great and I use that stuff everywhere.
         
         //First we create a couple new resources :
