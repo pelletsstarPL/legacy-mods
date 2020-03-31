@@ -1,16 +1,16 @@
 G.AddData({
     name:'Purple Peppers',
     author:'Orteil (Jake)',
-    desc:'A simple example mod that adds hot peppers and hot sauce.',
+    desc:'A simple mod that adds hot peppers and hot sauce.',
     engineVersion:1,
-    manifest:'modManifest.js',
+    manifest:'ModManifest.js',
     requires:['Default dataset*'],
     sheets:{'spicySheet':'https://raw.githubusercontent.com/JakeSESaunders/Legacy-Mod/master/img/pepperIconSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
     func:function()
     {
         // JAKE'S COPY OF ORTEIL'S MOD
 
-        //The idea in this simple example mod is to add a few elements focused around hot sauce, because hot sauce is great and I use that stuff everywhere.
+        //The idea in this simple mod is to add a few elements focused around hot sauce, because hot sauce is great and I use that stuff everywhere.
         
         //First we create a couple new resources :
         new G.Res({
