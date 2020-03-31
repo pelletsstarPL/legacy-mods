@@ -1,6 +1,6 @@
 G.AddData({
-    name:'Example mod',
-    author:'Orteil',
+    name:'Purple Peppers',
+    author:'Orteil (Jake)',
     desc:'A simple example mod that adds hot peppers and hot sauce.',
     engineVersion:1,
     manifest:'modManifest.js',
