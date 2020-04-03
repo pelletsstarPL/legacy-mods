@@ -5,7 +5,7 @@ G.AddData({
     engineVersion:1,
     manifest:'',
     requires:['Default dataset*'],
-    sheets:{'spicySheet':'https://raw.githubusercontent.com/JakeSESaunders/Legacy-Mod/master/img/pepperIconSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
+    sheets:{"purpleSheet":'http://127.0.0.1:8887/img/pepperIconSheet.png'},//custom stylesheet (note : broken in IE and Edge for the time being)
     func:function()
     {
         // JAKE'S COPY OF ORTEIL'S MOD
@@ -15,16 +15,26 @@ G.AddData({
         //First we create a couple new resources :
         new G.Res({
             name:'purple pepper',
-            desc:'[purple pepper]s are loaded with purple, depending on who you ask, may produce a pleasant purple when eaten.',
-            icon:[0,0,'spicySheet'],
+            desc:'[purple pepper]s are loaded with purp, depending on who you ask, may produce a pleasant purple when eaten.',
+            icon:[0,0,"purpleSheet"],
             turnToByContext:{'eat':{'health':0.01,'happiness':0.03},'decay':{'spoiled food':0.5}},//this basically translates to : "when eaten, generate some health and happiness; when rotting, turn into either nothing or some spoiled food"
             partOf:'food',
             category:'food',
         });
+
+        new G.Res({
+            name:'green pepper',
+            desc:'[green pepper]s are loaded with purple, depending on who you ask, may produce a pleasant purple when eaten.',
+            icon:[1,0,"purpleSheet"],
+            turnToByContext:{'eat':{'health':0.01,'happiness':0.03},'decay':{'spoiled food':0.5}},//this basically translates to : "when eaten, generate some health and happiness; when rotting, turn into either nothing or some spoiled food"
+            partOf:'food',
+            category:'food',
+        });
+
         new G.Res({
             name:'purple sauce',
             desc:'Made from [herb]s and the [purple pepper, purple-st peppers], this [purple sauce] stays fresh for a while and will leave anyone panting and asking for more.',
-            icon:[1,0,'spicySheet'],
+            icon:[1,0,'purpleSheet'],
             turnToByContext:{'eat':{'health':0.03,'happiness':0.1},'decay':{'hot sauce':0.95,'spoiled food':0.05}},//that last part makes hot sauce effectively have a 95% chance of simply not rotting (in effect, it decays into itself)
             partOf:'food',
             category:'food',
@@ -33,6 +43,7 @@ G.AddData({
         //Then we augment the base data to incorporate our new resources :
             //adding hot pepper as something that can be gathered from grass
         G.getDict('grass').res['gather']['purple pepper']=3;
+        G.getDict('grass').res['gather']['green pepper']=3;
             //adding a new mode to artisans so they can make hot sauce from hot peppers
         G.getDict('artisan').modes['purple sauce']={name:'Make purple sauce',desc:'Turn 3 [purple pepper]s and 3 [herb]s into 1 [purple sauce].',req:{'purple sauce preparing':true},use:{'knapped tools':1}};
             //adding a new effect to artisans that handles the actual hot sauce preparing and is only active when the unit has the mode "hot sauce"
@@ -42,7 +53,7 @@ G.AddData({
         new G.Tech({
             name:'purple sauce preparing',
             desc:'@[artisan]s can now produce [purple sauce] from [purple pepper]s and [herb]s//This special recipe allows a skilled craftsman to fully express the complex aromas present in hot peppers.',
-            icon:[0,1,'spicySheet'],
+            icon:[0,1,'purpleSheet'],
             cost:{'insight':10},
             req:{'cooking':true},
         });
@@ -51,7 +62,7 @@ G.AddData({
         new G.Trait({
             name:'purple sauce madness',
             desc:'@your people appreciate [purple sauce] twice as much and will be twice as happy from consuming it.',
-            icon:[1,1,'spicySheet'],
+            icon:[1,1,'purpleSheet'],
             chance:20,
             req:{'purple sauce preparing':true},
             effects:[
@@ -60,5 +71,8 @@ G.AddData({
         });
         
         //There are many other ways of adding and changing content; refer to /data.js, the default dataset, if you want to see how everything is done in the base game. Good luck!
+    
+
+    
     }
     });
