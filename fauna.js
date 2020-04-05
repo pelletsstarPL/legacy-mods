@@ -15,7 +15,7 @@ G.AddData({
     manifest: '',
     requires: ['Default dataset*'],
     sheets: {
-        'faunaSheet' : 'https://rawcdn.githack.com/JakeSESaunders/legacy-mod/70f90d7124d1d655cb8c50576f7af669c97e5e2e/img/faunaSheet.png'
+        'faunaSheet' : 'https://rawcdn.githack.com/JakeSESaunders/legacy-mod/a8895d0227be8ce025933d57ac4bdd6029870ffd/img/faunaSheet.png'
     },
 
     func: function() {
