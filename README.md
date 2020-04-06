@@ -14,6 +14,6 @@ The plan is:
 Open [Legacy](https://orteil.dashnet.org/legacy/) in your browser and, when creating a new tribe, click 'Use Mods' in the top right-hand corner.
 
 Below data.js, paste in the following URL:
-`https://rawcdn.githack.com/JakeSESaunders/legacy-mod/70f90d7124d1d655cb8c50576f7af669c97e5e2e/fauna.js`
+`https://rawcdn.githack.com/JakeSESaunders/legacy-mod/a15eced29af896842772dc79706febcc5ac2bee5/fauna.js`
 
 Click 'Load Mods' and start the game as normal. The mod should be installed!
