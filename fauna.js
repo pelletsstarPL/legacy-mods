@@ -34,7 +34,7 @@ G.AddData({
             partOf: '',
             category: 'animals',
             displayUsed: true,
-            turnToByContext:{'decay':{'corpse':1}},
+            turnToByContext:{'decay':{'corpse':1}}, //add animal corpses as separate resource ~ pelletsstarPL (Neverending legacy active modder ;)  )
             tick: function(me, tick) {
                 // Make this function kill horses
             }
